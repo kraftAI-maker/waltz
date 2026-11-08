@@ -71,7 +71,7 @@
     </scm>
 
     <properties>
-        <plugin.maven-compiler.version>3.8.1</plugin.maven-compiler.version>
+        <plugin.maven-compiler.version>3.11.0</plugin.maven-compiler.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven-shade-plugin.version>3.2.1</maven-shade-plugin.version>
@@ -85,7 +85,7 @@
         <immutables.version>2.9.3</immutables.version>
         <jackson.version>2.15.2</jackson.version>
         <jackson-jsr310.version>2.15.2</jackson-jsr310.version>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <javax.mail.version>1.4.7</javax.mail.version>
         <jbcrypt.version>0.4.3</jbcrypt.version>
         <jgrapht.version>1.4.0</jgrapht.version>
@@ -570,8 +570,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${plugin.maven-compiler.version}</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <release>${java.version}</release>
                     <optimize>true</optimize>
                     <showDeprecation>false</showDeprecation>
                     <showWarnings>true</showWarnings>
