@@ -71,6 +71,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class ProposedFlowWorkflowServiceTest extends BaseInMemoryIntegrationTest {
+
+    private static final EntityReference PROPOSED_FLOW_SOURCE = mkRef(APPLICATION, counter.incrementAndGet());
+    private static final EntityReference PROPOSED_FLOW_TARGET = mkRef(APPLICATION, counter.incrementAndGet());
     private static final String USER_NAME = "testUser";
 
     @Autowired
@@ -108,8 +111,8 @@ public class ProposedFlowWorkflowServiceTest extends BaseInMemoryIntegrationTest
         Set<Long> dataTypeIdSet = getDataTypeIdSet();
 
         ProposedFlowCommand command = ImmutableProposedFlowCommand.builder()
-                .source(mkRef(APPLICATION, 101))
-                .target(mkRef(APPLICATION, 202))
+                .source(PROPOSED_FLOW_SOURCE)
+                .target(PROPOSED_FLOW_TARGET)
                 .logicalFlowId(12345)
                 .physicalFlowId(12345)
                 .reason(reason)
@@ -137,8 +140,8 @@ public class ProposedFlowWorkflowServiceTest extends BaseInMemoryIntegrationTest
         Set<Long> dataTypeIdSet = getDataTypeIdSet();
 
         ProposedFlowCommand command = ImmutableProposedFlowCommand.builder()
-                .source(mkRef(APPLICATION, 101))
-                .target(mkRef(APPLICATION, 202))
+                .source(PROPOSED_FLOW_SOURCE)
+                .target(PROPOSED_FLOW_TARGET)
                 .logicalFlowId(12345)
                 .physicalFlowId(12345)
                 .reason(reason)
@@ -220,8 +223,8 @@ public class ProposedFlowWorkflowServiceTest extends BaseInMemoryIntegrationTest
         Set<Long> dataTypeIdSet = getDataTypeIdSet();
 
         ProposedFlowCommand command = ImmutableProposedFlowCommand.builder()
-                .source(mkRef(APPLICATION, 101))
-                .target(mkRef(APPLICATION, 202))
+                .source(PROPOSED_FLOW_SOURCE)
+                .target(PROPOSED_FLOW_TARGET)
                 .reason(reason)
                 .specification(physicalSpecification)
                 .flowAttributes(flowAttributes)
@@ -251,8 +254,8 @@ public class ProposedFlowWorkflowServiceTest extends BaseInMemoryIntegrationTest
         Set<Long> dataTypeIdSet = getDataTypeIdSet();
 
         ProposedFlowCommand command = ImmutableProposedFlowCommand.builder()
-                .source(mkRef(APPLICATION, 101))
-                .target(mkRef(APPLICATION, 202))
+                .source(PROPOSED_FLOW_SOURCE)
+                .target(PROPOSED_FLOW_TARGET)
                 .reason(reason)
                 .specification(physicalSpecification)
                 .flowAttributes(flowAttributes)
@@ -292,8 +295,8 @@ public class ProposedFlowWorkflowServiceTest extends BaseInMemoryIntegrationTest
         Set<Long> dataTypeIdSet = getDataTypeIdSet();
 
         ProposedFlowCommand command = ImmutableProposedFlowCommand.builder()
-                .source(mkRef(APPLICATION, 101))
-                .target(mkRef(APPLICATION, 202))
+                .source(PROPOSED_FLOW_SOURCE)
+                .target(PROPOSED_FLOW_TARGET)
                 .reason(reason)
                 .specification(physicalSpecification)
                 .flowAttributes(flowAttributes)

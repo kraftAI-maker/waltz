@@ -10,7 +10,15 @@ import org.finos.waltz.model.attestation.ImmutableLogicalFlowAttestationPreCheck
 import org.finos.waltz.model.attestation.LogicalFlowAttestationPreChecks;
 import org.finos.waltz.schema.tables.*;
 import org.finos.waltz.schema.tables.DataType;
-import org.jooq.*;
+import org.jooq.CommonTableExpression;
+import org.jooq.Condition;
+import org.jooq.DSLContext;
+import org.jooq.Query;
+import org.jooq.Record;
+import org.jooq.Record1;
+import org.jooq.Record2;
+import org.jooq.Record3;
+import org.jooq.SelectOrderByStep;
 import org.jooq.impl.DSL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
