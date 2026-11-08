@@ -45,6 +45,9 @@ import static org.finos.waltz.model.proposed_flow.ProposedFlowWorkflowState.FULL
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DataFlowServiceTest extends BaseInMemoryIntegrationTest {
+
+    private static final EntityReference PROPOSED_FLOW_SOURCE = mkRef(APPLICATION, counter.incrementAndGet());
+    private static final EntityReference PROPOSED_FLOW_TARGET = mkRef(APPLICATION, counter.incrementAndGet());
     private static final String USER_NAME = "testUser";
 
     @Autowired
@@ -85,8 +88,8 @@ public class DataFlowServiceTest extends BaseInMemoryIntegrationTest {
         Set<Long> dataTypeIdSet = getDataTypeIdSet();
 
         ProposedFlowCommand command = ImmutableProposedFlowCommand.builder()
-                .source(mkRef(APPLICATION, 101))
-                .target(mkRef(APPLICATION, 202))
+                .source(PROPOSED_FLOW_SOURCE)
+                .target(PROPOSED_FLOW_TARGET)
                 .reason(reason)
                 .specification(physicalSpecification)
                 .flowAttributes(flowAttributes)
@@ -129,8 +132,8 @@ public class DataFlowServiceTest extends BaseInMemoryIntegrationTest {
         Set<Long> dataTypeIdSet = getDataTypeIdSet();
 
         ProposedFlowCommand command = ImmutableProposedFlowCommand.builder()
-                .source(mkRef(APPLICATION, 101))
-                .target(mkRef(APPLICATION, 202))
+                .source(PROPOSED_FLOW_SOURCE)
+                .target(PROPOSED_FLOW_TARGET)
                 .reason(reason)
                 .specification(physicalSpecification)
                 .flowAttributes(flowAttributes)
@@ -194,8 +197,8 @@ public class DataFlowServiceTest extends BaseInMemoryIntegrationTest {
         Set<Long> dataTypeIdSet = getDataTypeIdSet();
 
         ProposedFlowCommand command = ImmutableProposedFlowCommand.builder()
-                .source(mkRef(APPLICATION, 101))
-                .target(mkRef(APPLICATION, 202))
+                .source(PROPOSED_FLOW_SOURCE)
+                .target(PROPOSED_FLOW_TARGET)
                 .reason(reason)
                 .specification(physicalSpecification)
                 .flowAttributes(flowAttributes)
@@ -264,8 +267,8 @@ public class DataFlowServiceTest extends BaseInMemoryIntegrationTest {
         Set<Long> dataTypeIdSet = getDataTypeIdSet();
 
         ProposedFlowCommand command = ImmutableProposedFlowCommand.builder()
-                .source(mkRef(APPLICATION, 101))
-                .target(mkRef(APPLICATION, 202))
+                .source(PROPOSED_FLOW_SOURCE)
+                .target(PROPOSED_FLOW_TARGET)
                 .reason(reason)
                 .specification(physicalSpecification)
                 .flowAttributes(flowAttributes)
@@ -331,8 +334,8 @@ public class DataFlowServiceTest extends BaseInMemoryIntegrationTest {
         Set<Long> dataTypeIdSet = getDataTypeIdSet();
 
         ProposedFlowCommand command = ImmutableProposedFlowCommand.builder()
-                .source(mkRef(APPLICATION, 101))
-                .target(mkRef(APPLICATION, 202))
+                .source(PROPOSED_FLOW_SOURCE)
+                .target(PROPOSED_FLOW_TARGET)
                 .reason(reason)
                 .specification(physicalSpecification)
                 .flowAttributes(flowAttributes)
