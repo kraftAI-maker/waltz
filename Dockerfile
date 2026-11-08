@@ -1,4 +1,4 @@
-FROM tomcat:8-jre8-temurin
+FROM tomcat:9-jre17-temurin
 
 ENV PATH="/usr/local/bin/liquibase:${PATH}" 
 
