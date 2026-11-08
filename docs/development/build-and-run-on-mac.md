@@ -4,7 +4,7 @@ Welcome! This guide is to walk you through setting up your development environme
 This document describes how to:
 1. install Homebrew package manager
 1. install git
-1. install Java Development Kit 8 (OpenJDK)
+1. install Java Development Kit 17 (OpenJDK)
 1. install maven
 1. install Node.js
 1. install PostgreSQL and create the Waltz database
@@ -33,27 +33,24 @@ git version 2.24.1 (Apple Git-126)
 ```
 if you don't have git installed, then install it via homebrew, using `brew install git` command in your Terminal.
 
-# Step 3. Install JDK 8
-To check wether Java Developer Kit version 8 is installed on your local machine, run the `java -version` command in your Terminal.
+# Step 3. Install JDK 17
+To check wether Java Developer Kit version 17 is installed on your local machine, run the `java -version` command in your Terminal.
 
 ```bash
-It should be Oracle JDK 8, it does not work with OpenJDK@8
 user@macbook ~ % java -version
-openjdk version "1.8.0_362"
-OpenJDK Runtime Environment (build 1.8.0_362-bre_2023_01_22_03_32-b00)
-OpenJDK 64-Bit Server VM (build 25.362-b00, mixed mode)
+openjdk version "17.0.x"
 ```
 
-If you don't have JDK 8 installed, then install it via homebrew, using `brew install openjdk@8` then `export JAVA_HOME=/usr/local/opt/openjdk@8/libexec/openjdk.jdk/Contents/Home` command in your Terminal.
+If you don't have JDK 17 installed, then install it via homebrew, using `brew install openjdk@17` then `export JAVA_HOME=$(brew --prefix openjdk@17)/libexec/openjdk.jdk/Contents/Home` command in your Terminal.
 
 # Step 4. Install maven
-To check wether maven is installed on your local machine, run the `mvn --version` command in your Terminal. It is important that your maven points to JDK 8, otherwise your Waltz build will fail.
+To check wether maven is installed on your local machine, run the `mvn --version` command in your Terminal. It is important that your maven points to JDK 17, otherwise your Waltz build will fail.
 
 ```bash
 user@macbook waltz % mvn --version
 Apache Maven 3.8.7 (b89d5959fcde851dcb1c8946a785a163f14e1e29)
 Maven home: /usr/local/Cellar/maven/3.8.7/libexec
-Java version: 1.8.0_362, vendor: Homebrew, runtime: /usr/local/Cellar/openjdk@8/1.8.0+362/libexec/openjdk.jdk/Contents/Home/jre
+Java version: 17.0.x, vendor: Homebrew, runtime: /usr/local/Cellar/openjdk@17/17.0.x/libexec/openjdk.jdk/Contents/Home
 Default locale: en_GB, platform encoding: UTF-8
 OS name: "mac os x", version: "13.1", arch: "x86_64", family: "mac"
 ```
@@ -62,7 +59,7 @@ If you don't have maven installed, then install it via homebrew, using `brew ins
 
 
 # Step 5. Install Node.js
-To check wether Node.js is installed on your local machine, run the `node --version` command in your Terminal. It is important that your maven points to JDK 8, otherwise your Waltz build will fail.
+To check wether Node.js is installed on your local machine, run the `node --version` command in your Terminal.
 
 ```bash
 user@macbook waltz % node --version
@@ -287,6 +284,6 @@ SSL Enabled: false
 ----------------------------------------------------
 ```
 
-If you get a error saying Java not found, then revisit the step where we installed JDK 8 and set the JAVA_HOME variable. Perhaps you have to reset this JAVA_HOME variable again.
+If you get a error saying Java not found, then revisit the step where we installed JDK 17 and set the JAVA_HOME variable. Perhaps you have to reset this JAVA_HOME variable again.
 # Congratulations!
 Now you can start exploring Waltz by opening [http://localhost:8443/](http://localhost:8443/)!

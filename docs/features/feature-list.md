@@ -302,7 +302,7 @@ Major libraries / frameworks being used:
 
 ### Server
 
-- [Java](https://www.java.com/en/), currently supporting 8, but shortly moving to JDK 11 and then 17
+- [Java](https://www.java.com/en/), JDK 17
 - [Spring framework](https://spring.io/projects/spring-framework) for auto-wiring components
 - [Spark Java](http://sparkjava.com/), a lightweight framework for creating REST endpoints
 - [jOOQ](https://www.jooq.org/), a java DSL for writing and executing database queries
